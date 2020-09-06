@@ -142,6 +142,11 @@ define([
 
 	return points.mouse = {
 		mouseWheelEvent,
-		normalizeWheel
+		normalizeWheel,
+
+		isMouseEvent,
+		isLeftMouseButton,
+		isMiddleMouseButton,
+		isRightMouseButton
 	};
 });

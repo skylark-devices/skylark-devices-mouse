@@ -27,6 +27,9 @@ define([
   };
 
 
+  /*
+   * Converts single-touch event to mouse event.
+   */
   function mousy(elm) {
     var touchToMouse = function(event) {
         if (event.touches.length > 1) return; //allow default multi-touch gestures to work

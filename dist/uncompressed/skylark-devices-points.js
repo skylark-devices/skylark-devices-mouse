@@ -235,7 +235,12 @@ define('skylark-devices-points/mouse',[
 
 	return points.mouse = {
 		mouseWheelEvent,
-		normalizeWheel
+		normalizeWheel,
+
+		isMouseEvent,
+		isLeftMouseButton,
+		isMiddleMouseButton,
+		isRightMouseButton
 	};
 });
 define('skylark-devices-points/touch',[
@@ -267,6 +272,9 @@ define('skylark-devices-points/touch',[
   };
 
 
+  /*
+   * Converts single-touch event to mouse event.
+   */
   function mousy(elm) {
     var touchToMouse = function(event) {
         if (event.touches.length > 1) return; //allow default multi-touch gestures to work
